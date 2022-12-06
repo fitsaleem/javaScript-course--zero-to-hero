@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>functions in javaScript</title>
+</head>
+<body>
+    <script>
+
+        //without parameters in functions
+        function bioData(){
+           console.log("my name is "+ name);
+           console.log("my age  is "+ age); 
+           console.log("my city is "+ city); 
+
+
+        }
+        let name="saleem Raza"
+        let age=18;
+        let city="karachi";
+        bioData();
+
+        //with parameters in function
+        function sum(a,b){
+            let add=a+b;
+            console.log("the sum of two numbers are  "+ add);
+
+        }
+        sum(5,6);
+        sum(7,8);
+         
+        // with return values in functions
+        function percentage(a,b,c,){
+            let total=300;
+            let per= (a+b+c)/total *100;
+            return per
+        }
+        let p=percentage(75,85,95);
+        console.log("the percentage of three numbers are " + p +"%");
+
+
+        // quick assignment compare two numbers and print greater number
+
+        function compare(a,b) {
+            if(a>b){
+                console.log("the greater number is "+ a);
+                console.log("the smallesr number is "+b);
+            }
+            else{
+                console.log("the greater number is "+b);
+                console.log("the smallest number is "+a);
+
+            }  
+        }
+        compare(78,89);
+        compare(90,100);
+
+
+
+
+
+    </script>
+</body>
+</html>
