@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>javaScript document object model</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+
+        }
+        nav.navBar ul{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            background: #000;
+            padding: 10px 10px;
+    
+        }
+        nav.navBar ul li{
+            list-style: none;
+        }
+        nav.navBar ul li a{
+            text-decoration: none;
+            color: #fff;
+           
+
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navBar">
+            <ul>
+                <li><a href="#">home</a></li>
+                <li><a href="#">about</a></li>
+                <li><a href="#">sevices</a></li>
+                <li><a href="#">contact us</a></li>
+            </ul>
+        </nav>
+    </header>
+    <script>
+        //1
+        //create a navBar and change the color of first element to red
+
+    //   let a= document.getElementsByTagName("a")
+    //   console.log(a)
+    //   a[0].style.color="red"
+
+    //2
+    //change first and last element child of color to green
+
+    // b=document.getElementsByTagName("a")
+    // b[0].style.color="green"
+    // b[b.length-1].style.color="green"
+
+    //3
+    //change the background of all li 
+     Array.from(document.getElementsByTagName("li")).forEach(element=>{
+        element.style.backgroundColor="red"
+    })
+   
+
+
+
+    
+
+
+    
+    
+    
+    
+
+
+        
+        
+        
+
+    </script>
+</body>
+</html>

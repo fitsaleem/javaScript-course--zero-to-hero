@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        //1:  create an array of number and take input from user to add a number to array .
+
+        // let myArray = [66, 88, 00, 99];
+        // let inputUser = prompt("input your number you want to add in array:")
+        // inputUser=Number.parseInt(inputUser);
+        // myArray.push(inputUser);
+        // console.log(myArray);
+
+        //2:  keep numbers added to arry until 0 is add in array .
+
+        // let myArray=[44,88,88,89];
+
+        // do {
+        //     let imputUser=prompt("input your number you want to add in array: ");
+        // inputUser=Number.parseInt(imputUser);
+        // myArray.push(inputUser);
+        // } while (inputUser!=0);
+
+        // console.log(myArray);
+
+
+
+        //3: filter for number divisible by 10 for given array:
+
+       // const numbers = [109, 20, 300, 4, 60, 60, 70, 80, 907, 100];
+
+        // const divisibleBy10 = numbers.filter(num => num % 10 === 0);
+
+        // console.log(divisibleBy10); 
+
+        //or 
+
+        // let filterNumber = numbers.filter((value) => {
+        //     return (value % 10) == 0;
+        // })
+        // console.log(filterNumber);
+
+
+
+        //4:  create an array of square of given array:
+
+        // let array = [33, 77, 99, 99, 44, 88];
+        // let squareArray = array.map((value) => {
+        //     return value * value;
+        // });
+        // console.log(squareArray);
+        //or
+
+        // var array1 = [1, 2, 3, 4, 5];
+
+        // var squaredArray = array1.map(x => x * x);
+
+        // console.log(squaredArray)
+
+        //5: use reduce to calculate factorial of a given number from an array of firsr natural numbers 
+
+        // let arr=[1,2,3,4,5,6];
+        // let factorial=arr.reduce((x1,x2)=>{
+        //     return x1*x2;
+        // });
+        // console.log(factorial);
+
+        let number=[77,88,989,99];
+        let addnumber=prompt("enter the number");
+        do {
+        addnumber=Number.parseInt(addnumber)
+        number.push(addnumber);
+        } while (addnumber!=0);
+        
+        console.log(number);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>
