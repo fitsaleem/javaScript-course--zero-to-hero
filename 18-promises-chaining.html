@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>promises chaining in javaScript </title>
+</head>
+<body>
+    <script>
+        //promise chaining
+let promises1=new Promise((resolve,reject)=>{
+    setTimeout(()=>{
+        console.log("the promises is resloved")
+        resolve(55);
+
+    },5000)
+
+})
+
+promises1.then((result)=>{
+    console.log("the result is "+ result);
+    let promises2= new Promise((resolve,reject)=>{
+        setTimeout(() => {
+            console.log("the promises 2 is resolvded")
+            resolve(77);
+        }, 5000);
+    })
+
+    return promises2
+}).then((result)=>{
+    console.log("the result is "+ result);
+    let promises3= new Promise((resolve,reject)=>{
+        setTimeout(() => {
+            console.log("the promises 3 is resolvded")
+            resolve(99);
+        }, 5000);
+    })
+
+    return promises3
+
+}).then((value)=>{
+    console.log("the result of promises is "+ value)
+})
+
+
+
+
+
+    </script>
+
+    
+</body>
+</html>

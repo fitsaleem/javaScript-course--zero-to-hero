@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 
@@ -62,84 +61,8 @@
 
         }
         loadScript("https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" ,onLoad);
-
-
-
-
-
-
-
-
-
-
-    </script>
-</body>
-
-=======
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>call back functions</title>
-</head>
-
-<body>
-    <script>
-        //first example for callBack function
-        //you can pass inside another function as a parameter this is call callBack function.
-
-        // function add(a, b, callBack) {
-        //     console.log(a + b);
-        //     callBack();
-        // }
-
-        // function sayHello() {
-        //     console.log("hello every one")
-        // };
-        // function sayHI() {
-        //     console.log("its call back function")
-        // }
-        // add(5, 8, sayHI)
-        // add(7, 9, sayHello)
-        // //using anonymous function (means unknown name)
-        // add(7, 9, function () {
-        //     console.log("this is anonymous function means without name")
-        // })
-
-        //second example of callBack function using asynchronus:
-
-        function loadScript(url, callBack){
-            var script=document.createElement("script")
-            script.src=url;
-            document.body.appendChild(script);
-            script.onload=function(){
-                callBack(null,url);
-
-            }
-            script.onerror=function(){
-                callBack(new Error("src got some error "));
-            }      
-            }
         
 
-        function onLoad(src){
-            console.log("script is loded successfully.. " +src)
-        }
-        function onError(error,src){
-            if (error){
-                console.log(error)
-                return;
-            }
-            else{
-                console.log("your url run succesfully ")
-            }
-
-        }
-        loadScript("https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" ,onLoad);
-
 
 
 
@@ -152,5 +75,4 @@
     </script>
 </body>
 
->>>>>>> 529fc83883b0ce809ba22fba0f3816d2fe9cbea7
 </html>

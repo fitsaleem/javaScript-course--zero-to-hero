@@ -1,22 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>introduction to promises</title>
 </head>
+
 <body>
     <script>
         // the solution of the callback is promiswes. we use promises in javaScript because it will done our work easy 
 
-        // syntex:
-        let promises=new Promise (function(resolve,reject){
-            resolve(55);
-            alert("hello this is alert promises resolve");
+
+        let promises1 = new Promise(function (resolve, reject) {
+            setTimeout(() => {
+                //console.log("hello this is alert promises resolve");
+                resolve(true)
+            }, 5000);
         })
+
+        promises1.then(alert)
+
+
+        let promises2 = new Promise((resolve, reject) => {
+            setTimeout(() => {
+                //  console.log("this is reject promise")
+                reject(new Error("i am an error"))
+            }, 5000)
+        });
+
+
+
+        // promises1.then(function value(v1){
+        //     console.log(v1)
+        // })
+
+        //also write with this 
+        // to get the value 
+        promises1.then((value) => {
+            console.log(value);
+        })
+
+        // to catch the error
+        promises2.catch((error) => {
+            console.log("occure some error")
+        })
+
+        //also you can give both at a time 
+
+        promises2.then((value)=>{
+            console.log(value);
+        },(error)=>{
+            console.log("some error occure ")
+        });
         
+
+        
+
+
+
+        // reWrite the script function using promises which we cover in privous callBack function 
+
+
+
+
+
+
+
+
 
     </script>
 </body>
+
 </html>
