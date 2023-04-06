@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Async and Await in javaScript</title>
+  </head>
+  <body>
+    <script>
+      // Async in js
+      // there is a special syntax in js to work with promises
+      // we can make any function to async function and we can await a promise in it
+      // await method will be use inside a async function
+      // await method wiil be used with you wnat to fatch data from the server.
+
+      //example: 1:
+
+      async function sayHello() {
+        return "hello world";
+      }
+
+      sayHello().then((value) => {
+        console.log("promise completed sucessfully: " + value);
+      });
+
+      // second method with arrow function
+
+      let sayBy = async () => "BY world";
+
+      sayBy().then((value) =>
+        console.log("promise completed sucessfully: " + value)
+      );
+
+      //example: 2: async function with await method
+
+      let studentsData = async () => {
+        // let response= await fetch('https://jsonplaceholder.typicode.com/todos/5')
+        // let students= await response.json();
+
+        // return students
+
+        // refactor code:
+
+        return (
+          await fetch("https://jsonplaceholder.typicode.com/todos/5")
+        ).json();
+      };
+
+      studentsData()
+        .then((value) => console.log(value))
+        .catch((error) => console.log(error));
+    </script>
+  </body>
+</html>

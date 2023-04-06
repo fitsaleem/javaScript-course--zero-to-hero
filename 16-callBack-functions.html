@@ -34,7 +34,7 @@
         //second example of callBack function using asynchronus:
 
         function loadScript(url, callBack){
-            var script=document.createElement("script")
+            let script=document.createElement("script")
             script.src=url;
             document.body.appendChild(script);
             script.onload=function(){
