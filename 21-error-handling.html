@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>error handling in js</title>
+</head>
+<body>
+    <script>
+        // error handling in js try and catch:
+        // try catch error work synchronizationaly 
+
+        // example: 01
+
+        try {
+            console.log("hello world: ")
+            syaHello()
+        } catch (error) {
+            console.log("some error accore in code ")
+            console.log(error)
+        }finally{
+            console.log("example 1 complete")
+        }
+
+        // example: 02
+
+        // function sayHello() {
+        //     try {
+        //         setTimeout(() => {
+        //         console.log(hi()) 
+        //     }, 2000);
+        
+        //     } catch (error) {
+        //         console.log(error)
+        //     }
+        // }
+
+        // so above example will not generate error because the try catch error work synchronizationaly so we will give try catch error inside the setInterval
+
+        function sayHello() {
+
+            setTimeout(() => {
+                try {
+                
+                console.log(hi()) 
+            } catch (error) {
+               
+                console.log(error.name)
+                console.log(message)
+                console.log(error.stack)
+            }finally{
+            console.log("example 2 complete")
+        }
+        
+            }, 2000);
+        }
+
+        sayHello();
+         
+       // now now it will catch the error 
+
+       // some error mehonds are :
+       /*
+       For all built-in errors, the error object has two main properties:
+
+1: name
+Error name. For instance, for an undefined variable that’s "ReferenceError".
+2: message
+Textual message about error details.
+There are other non-standard properties available in most environments. One of most widely used and supported is:
+
+3: stack
+Current call stack: a string with information about the sequence of nested calls that led to the error. Used for debugging purposes.
+*/
+
+
+
+
+    </script>
+</body>
+</html>
